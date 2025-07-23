@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA-SCRIPT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: rgb(83, 81, 81);
+            color: white;
+            height: 3cm;
+            line-height: 3cm;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        .age {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-top: 2.5cm;
+        }
+
+        .age:hover {
+            background-color: rgb(240, 236, 236);
+            cursor: pointer;
+            transition: 0.25s ease-in-out;
+        }
+
+        .agecon {
+            display: flex;
+            justify-content: center;
+        }
+
+        label {
+            font-size: 25px;
+            margin-top: 2.5cm;
+            margin-right: 1cm;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 19px;
+            text-align: center;
+        }
+
+        .h2 {
+            border: 1px solid black;
+            margin-top: 1cm;
+            width: 50%;
+            height: auto;
+            line-height: 2cm;
+            box-shadow: 0px 0px 30px 10px black;
+        }
+        .sumbit{
+            background-color: rebeccapurple;
+            color: white;
+            height: 1cm;
+            width: 2cm;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 2.5cm;
+            margin-left: 1cm;
+        }
+        .sumbit:hover{
+            background-color: rgb(71, 0, 141);
+            transition: 0.25s ease-in-out;
+        }
+        .para{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1cm;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WELCOME</h1>
+    <div class="agecon">
+        <label for="age">Your Age:</label>
+        <input type="text" id="age" class="age" placeholder="Enter Age">
+        <button class="sumbit" id="sumbit">SUMBIT</button>
+    </div>
+    <center>
+        <div class="h2">
+            <h2>THIS IS WHAT YOU CAN DO ACCORDING TO YOUR AGE:</h2>
+            <p class="para" id="para"></p>
+        </div>
+    </center>
+    <script>
+        let ages=document.getElementById("age").value;
+        ages=Number(ages);
+        
+        const age=document.getElementById("age").onclick = function(){
+            let ages=document.getElementById("age").value;
+        }
+        const sumbit=document.getElementById("sumbit").onclick = function(){
+            let ages=document.getElementById("age").value;
+            ages=Number(ages);
+            console.log(ages);
+            if (ages>=18) {
+                document.getElementById("para").textContent="YOU CAN DRIVE, YOU CAN GO ALONE ANYWHERE YOU WANT, YOU CAN OPEN YOUR BANK ACCOUNT, YOU ARE NOT A CHILD";
+                
+            } else {
+                document.getElementById("para").textContent="YOU CAN NOT DRIVE, YOU CAN NOT GO ALONE ANYWHERE YOU WANT, YOU CAN NOT OPEN YOUR BANK ACCOUNT, YOU ARE A CHILD";   
+            }
+        }
+    </script>
+</body>
+
+</html>
